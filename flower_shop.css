@@ -1,0 +1,416 @@
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+    background-color: rgb(253, 210, 217);
+    border: solid brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+    position:fixed;
+    width:100%;
+    height:20%;
+    margin: 0;
+    top: 0;
+    left:0;
+    box-sizing:border-box;
+    z-index: 1000;
+    user-select: none;
+}
+/* z-index de nav helita sarva nahelit bchita bn tasire slide,raqam ji na muhima */
+
+.header{
+    font-size: 1.25em;
+}
+
+ html, body{
+    margin:0;
+    padding:0;
+}
+
+.slider *{
+    margin:0;
+    padding:0;
+    user-select:none;
+} 
+/* * is the universal selector — it matches every element on the page */
+
+.slider{
+    margin:0;
+    width: 100%;
+    height:900px;
+    overflow: hidden;
+}
+
+figure{
+    position: relative;
+    left:0;
+    width: 200%;
+    height: 600px;
+    transition: 1s ease;    
+}
+
+.slide{
+    position: relative;
+    width: 50%;
+    float:left;
+}
+
+.slide h1{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    top: 33%;
+    left: 10%;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.slide pre{
+    position: absolute;
+    font-size: x-large;
+    display: block;
+    padding-left: 0px;
+    z-index: 100;
+    color: white;
+    top:45%;
+    left:10%;
+    color:white;
+}
+
+
+.slide h1, .slide pre{
+    display: block;
+    text-align: left;
+    transition: 1s ease;
+    user-select: none;
+}
+
+
+.slide img{
+    padding-top: 155px;
+    width:100%;
+    height:1000px;
+    filter: brightness(50%);
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.next{
+    position:absolute;
+    top:50%;
+    right:20px;
+    font-size: 5em;
+
+    color: white;
+    background-color: transparent;
+    border:0px;
+    border-radius: 100%;
+    padding:8px;
+    z-index: 100;
+}
+.prev{
+    position:absolute;
+    top:50%;
+    left:10px;
+    font-size: 5em;
+    
+    color: white;
+    background-color: transparent;
+    border:0px ;
+    border-radius: 100%;
+    padding:8px;
+    z-index: 100;
+}
+
+.prev:hover,.next:hover{
+    background-color:white;
+    opacity: 60%;
+    color:rgb(249, 126, 146);
+    transition: 0.3s;
+}
+
+body{
+justify-content: center;
+}
+
+a{
+    color:brown;
+    text-decoration:none;
+}
+
+a:hover{
+    border: 2px;
+    background-color:brown;
+    color:pink;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+#home pre,#order pre,#more pre{
+    width: auto;
+    font-size: large;
+    margin-left: 0px;
+    padding: 10px 0px;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+body #home{
+    padding:10px;
+}
+
+p ,pre{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: brown;
+    padding:10px;
+    width:auto;
+}
+
+hr{
+    font-size: xx-large;
+    margin: 20px 150px;
+    padding: 20px;
+    display: none;
+}
+
+h2{
+    color:brown;
+    font-size: x-large;
+    font-family: cursive;
+    /* display: inline-block; */
+    text-align: center;
+    /* background-color:pink; */
+    /* border-radius:20%; */
+    /* border: 1px solid brown; */
+    padding:20px 5px;
+    font-size: 2em;
+}
+
+h3{
+    color:brown;
+    font-size: large;
+    font-family: cursive;
+    display: inline-block;
+    /* background-color:pink; */
+    padding:10px 25px;
+}
+.flowers h3{
+    color:brown;
+    font-size: large;
+    font-family: cursive;
+    background-color:white;
+    
+}
+
+.flowers img{
+    display: block;   /* Allows automatic margins to take effect */
+    margin: 0 auto;    /*Centers the image horizontally inside its container */
+    max-width: 100%;   
+    height: 40%;
+    border:1px solid brown;
+}
+
+
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: brown;
+    background-color: pink;
+    border:2px solid brown;
+    border-radius: 15%;
+    padding:10px;
+    width:30%;
+}
+
+input[type=checkbox]{
+    display:none;
+}
+
+.hamb{
+    display: none;
+}
+.menu{
+    display:flex;
+    gap:20px;
+} 
+/* ^husa nachekay de menu xr jechit bu screen mazn */
+
+.flower-container,.flower-container2, .flower-container3, .flower-container4, .flower-container5 {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to jump to the next line on smaller screens */
+    gap: 20px;       /* Adds spacing between boxes */
+    /* padding: 10px; */
+}
+
+
+.flower-box,.flower-box2, .flower-box3,.flower-box4, .flower-box5 {
+    border: 1px solid brown;
+    background-color: white;
+    /* padding: 15px; */
+    width: 350px;      /* Gives every box a fixed width */
+    height: 550px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    border-radius: 10%;
+}
+
+.flower-box img,.flower-box2 img,.flower-box3 img,.flower-box4 img, .flower-box5 img{
+    width:350px;
+    height:300px;
+    border: 1px solid brown;
+    border-radius: 10%;
+}
+
+.flowers, .flowers2, .flowers3,.flowers4, .flowers5{
+    justify-content: center;
+    display: flex;
+}
+
+#available,#footer,#home pre,#order pre,#more pre{
+    padding:0px 150px;
+    margin:70px;
+}
+
+#order pre{
+    padding-bottom:50px;
+}
+
+#home,.flowers2,#peony,.flowers4,#lily,#order{
+    background-color: rgb(253, 245, 248);
+    margin: 0px;
+    height: auto;
+}
+
+#footer{
+    background-color: rgb(253, 210, 217);
+    margin: 0px;
+    height: auto;
+}
+
+.contact{
+    padding: 0px;
+    display: flex;
+    text-align: left;
+}
+
+.contact-info{
+    width: 50%;
+    padding: 5px 20px;
+    flex-direction: column;
+    margin:10px 50px;
+    gap: 8px;
+    display: flex;
+}
+
+.contact a{
+    /* margin: 5px 0px;
+    padding: 5px 0px; */
+    color:brown;
+    text-decoration:none;
+    font-size: large;
+}
+
+.contact a:hover{
+    width: 50%;
+    border: 2px;
+    background-color:brown;
+    color:pink;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.copyright{
+    background-color: rgb(254, 199, 208);
+    border:2px solid brown;
+    text-align: center;
+    font-size: xx-large;
+    color:brown;
+}
+
+.table table-striped{
+    border: 1px solid brown;
+}
+
+@media (max-width:768px){
+    nav{
+        height: auto !important;
+        position: fixed;
+    }
+    
+    .menu{
+        display:none;
+        gap:70px;
+        font-family: cursive;
+        font-size: medium;
+        color: brown;
+        background-color: pink;
+        border:2px solid brown;
+        border-radius: 15%;
+        padding:30px;
+        width:100%;
+    }
+    
+    input[type=checkbox]:checked~.menu{
+        height: auto;
+        max-height: none;
+        display:flex; 
+        /* idky haka disp flex nabit button shul nakat */
+        flex-direction: column;
+        gap:10px;
+        width: 70%;    
+        margin-top: 50px;
+    }
+    
+    .hamb{
+        height: auto;
+        max-height: auto;
+        position: fixed;
+        user-select:none;
+        display:block;
+        width:20px;
+        margin-left: auto;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .flower-container,.flower-container2,.flower-container3,.flower-container4,.flower-container5 {
+        flex-direction: column; /* Stacks the boxes vertically */
+        align-items: center;    /* Centers the boxes horizontally */
+    }
+
+    .slider{
+        width:105vw;
+    }
+
+    .header h1{
+        font-size: 1.5em;
+    }
+    
+    .slide h1{
+        font-size: 2em;
+    }
+
+    .slide pre{
+        font-size: medium;
+    }
+    
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer,#home pre,#order pre,#more pre{
+        padding:0px 10px;
+        margin:0px;
+    }
+
+}
